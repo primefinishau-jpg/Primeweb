@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Prime Finish Renovations - Brisbane's Renovation Experts" },
       {
         property: "og:description",
-        content: "TTTransforming Spaces. Elevating Lives. Premium renovations done right.",
+        content: "Transforming Spaces. Elevating Lives. Premium renovations done right.",
       },
     ],
   }),
@@ -121,7 +121,7 @@ function HomePage() {
               <MapPin className="h-3.5 w-3.5" /> Brisbane Renovation Experts
             </div>
             <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.02] text-balance drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
-              Transforming spaces.
+              TTTTransforming spaces.
               <br />
               <span className="bg-gradient-to-r from-teal to-primary-glow bg-clip-text text-transparent">
                 Elevating lives.
