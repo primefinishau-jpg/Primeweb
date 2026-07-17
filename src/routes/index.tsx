@@ -152,7 +152,7 @@ function HomePage() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[11px] uppercase tracking-[0.22em] text-white/60">Call us</div>
+                  <div className="text-[11px] uppercase tracking-[0.22em] text-white/60 txt">Call us</div>
                   <div className="text-lg font-semibold">0450 010 250</div>
                 </div>
               </a>
