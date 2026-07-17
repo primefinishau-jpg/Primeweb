@@ -121,7 +121,7 @@ function HomePage() {
               <MapPin className="h-3.5 w-3.5" /> Brisbane Renovation Experts
             </div>
             <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.02] text-balance drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
-              TTTTransforming spaces.
+              Transforming spaces.
               <br />
               <span className="bg-gradient-to-r from-teal to-primary-glow bg-clip-text text-transparent">
                 Elevating lives.
@@ -129,7 +129,7 @@ function HomePage() {
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/85 leading-relaxed">
               Premium home renovations and commercial fitouts across Brisbane,
-              delivered by a team obsessed with finish, function and follow-through.
+              delivered by a team obsessed with finish, function and follow-through
             </p>
             <ul className="mt-8 space-y-3">
               {[
