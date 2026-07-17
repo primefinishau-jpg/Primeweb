@@ -3,9 +3,9 @@ import { Loader2, CheckCircle2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 // ─── Replace these three values with your own from emailjs.com ───────────────
-const EMAILJS_SERVICE_ID  = "service_tp4bkyd";   // Dashboard → Email Services
-const EMAILJS_TEMPLATE_ID = "template_bvabj3u";  // Dashboard → Email Templates
-const EMAILJS_PUBLIC_KEY  = "wzFLELO7wYxaZ6yg6"; // Account → General → Public Key
+const EMAILJS_SERVICE_ID  = "service_1hmadib";   // Dashboard → Email Services
+const EMAILJS_TEMPLATE_ID = "template_l66vu98";  // Dashboard → Email Templates
+const EMAILJS_PUBLIC_KEY  = "vFiLFSapNZ3GGTz2v"; // Account → General → Public Key
 // ─────────────────────────────────────────────────────────────────────────────
 
 const projectTypes = [
