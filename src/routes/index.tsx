@@ -129,7 +129,7 @@ function HomePage() {
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/85 leading-relaxed">
               Premium home renovations and commercial fitouts across Brisbane,
-              delivered by a team obsessed with finish, function and follow-through
+              delivered by a team obsessed with finish, function and follow-through.
             </p>
             <ul className="mt-8 space-y-3">
               {[
