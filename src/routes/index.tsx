@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Prime Finish Renovations - Brisbane's Renovation Experts" },
       {
         property: "og:description",
-        content: "Transforming Spaces. Elevating Lives. Premium renovations done right.",
+        content: "TTTransforming Spaces. Elevating Lives. Premium renovations done right.",
       },
     ],
   }),
