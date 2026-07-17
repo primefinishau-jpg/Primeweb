@@ -5,9 +5,9 @@ import { t as es_default } from "../_libs/emailjs__browser.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/QuoteForm-Ez7BluJE.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var EMAILJS_SERVICE_ID = "service_tp4bkyd";
-var EMAILJS_TEMPLATE_ID = "template_bvabj3u";
-var EMAILJS_PUBLIC_KEY = "wzFLELO7wYxaZ6yg6";
+var EMAILJS_SERVICE_ID = "service_1hmadib";
+var EMAILJS_TEMPLATE_ID = "template_l66vu98";
+var EMAILJS_PUBLIC_KEY = "vFiLFSapNZ3GGTz2v";
 var projectTypes = [
 	"Full Home Renovation",
 	"Kitchen Renovation",
