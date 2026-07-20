@@ -87,10 +87,9 @@ const testimonials = [
 function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative min-h-[100svh] flex items-center text-white overflow-hidden bg-charcoal">
+      {/* HERO */}      <section className="relative min-h-[760px] lg:min-h-[820px] xl:min-h-screen flex items-center text-white overflow-hidden bg-charcoal">
         {/* Atmospheric backdrop */}
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal to-[oklch(0.1_0.02_230)]" />
+        <div className="absolute inset-0 bg-linear-to-br from-charcoal via-charcoal to-[oklch(0.1_0.02_230)]" />
         {/* Teal ambient glows */}
         <div className="absolute inset-0 opacity-70 [background:radial-gradient(40%_45%_at_10%_25%,oklch(0.66_0.12_210/0.4),transparent_70%)]" />
         <div className="absolute inset-0 opacity-60 [background:radial-gradient(35%_40%_at_95%_75%,oklch(0.66_0.12_210/0.35),transparent_70%)]" />
@@ -106,7 +105,7 @@ function HomePage() {
 
         {/* Foreground portrait - only shown once there's real room for it (xl+) so it never
             collides with the copy column on tablets */}
-        <div className="pointer-events-none select-none hidden xl:block absolute z-10 top-20 right-[40%] 2xl:right-[42%] h-[calc(100svh-5.5rem)] max-h-[700px] w-auto">
+        <div className="pointer-events-none select-none hidden lg:block absolute z-10 top-20 right-[34%] 2xl:right-[42%] h-[calc(100svh-5.5rem)] max-h-[700px] w-auto">
           <div className="absolute left-1/2 bottom-0 h-10 w-60 -translate-x-1/2 rounded-full bg-black/75 blur-2xl opacity-100" />
           <img
             src={heroPortrait}
@@ -118,13 +117,13 @@ function HomePage() {
           />
         </div>
 
-        <div className="container-prime relative pt-28 md:pt-32 lg:pt-36 pb-16 md:pb-20 grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="container-prime relative pt-20 md:pt-24 lg:pt-28 xl:pt-36 pb-16 md:pb-20 grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left: copy */}
-          <div className="relative z-20 md:col-span-7 max-w-2xl">
+          <div className="relative z-20 md:col-span-12 lg:col-span-6 xl:col-span-7 max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-teal/40 bg-teal/10 backdrop-blur px-4 py-1.5 text-[11px] font-semibold text-teal uppercase tracking-[0.22em]">
               <MapPin className="h-3.5 w-3.5" /> Brisbane Renovation Experts
             </div>
-            <h1 className="mt-6 text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] text-balance drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+            <h1 className="mt-6 text-4xl sm:text-5xl md:text-5xl lg:text-[58px] xl:text-7xl font-semibold leading-[1.05] text-balance drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
               Transforming spaces.
               <br />
               <span className="bg-gradient-to-r from-teal to-primary-glow bg-clip-text text-transparent">
@@ -133,7 +132,7 @@ function HomePage() {
             </h1>
             <p className="mt-6 max-w-xl text-base md:text-lg text-white/85 leading-relaxed">
               Premium home renovations and commercial fitouts across Brisbane,
-              delivered by a team obsessed with finish, function and follow-through.
+              delivered by a team obsessed with finish, function and follow-through
             </p>
             <ul className="mt-8 space-y-3">
               {[
@@ -180,7 +179,7 @@ function HomePage() {
                 <p className="mt-1.5 text-sm text-muted-foreground">
                   Tell us about your project. No obligation.
                 </p>
-                <div className="mt-6">
+                <div className="mt-6 md:col-span-12 lg:col-span-6 xl:col-span-5">
                   <QuoteForm compact />
                 </div>
               </div>
