@@ -36,6 +36,9 @@ export const Route = createFileRoute("/")({
         content: "Transforming Spaces. Elevating Lives. Premium renovations done right.",
       },
     ],
+    links: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+    ],
   }),
   component: HomePage,
 });
@@ -101,8 +104,9 @@ function HomePage() {
           }}
         />
 
-        {/* Foreground portrait grounded to the hero floor, just left of the quote form */}
-        <div className="pointer-events-none select-none hidden lg:block absolute z-10 top-20 right-[40%] xl:right-[42%] h-[calc(100svh-5.5rem)] max-h-[700px] w-auto">
+        {/* Foreground portrait - only shown once there's real room for it (xl+) so it never
+            collides with the copy column on tablets */}
+        <div className="pointer-events-none select-none hidden xl:block absolute z-10 top-20 right-[40%] 2xl:right-[42%] h-[calc(100svh-5.5rem)] max-h-[700px] w-auto">
           <div className="absolute left-1/2 bottom-0 h-10 w-60 -translate-x-1/2 rounded-full bg-black/75 blur-2xl opacity-100" />
           <img
             src={heroPortrait}
@@ -114,20 +118,20 @@ function HomePage() {
           />
         </div>
 
-        <div className="container-prime relative pt-36 pb-20 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="container-prime relative pt-28 md:pt-32 lg:pt-36 pb-16 md:pb-20 grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left: copy */}
-          <div className="relative z-20 lg:col-span-7 max-w-2xl">
+          <div className="relative z-20 md:col-span-7 max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-teal/40 bg-teal/10 backdrop-blur px-4 py-1.5 text-[11px] font-semibold text-teal uppercase tracking-[0.22em]">
               <MapPin className="h-3.5 w-3.5" /> Brisbane Renovation Experts
             </div>
-            <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.02] text-balance drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+            <h1 className="mt-6 text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] text-balance drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
               Transforming spaces.
               <br />
               <span className="bg-gradient-to-r from-teal to-primary-glow bg-clip-text text-transparent">
                 Elevating lives.
               </span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-white/85 leading-relaxed">
+            <p className="mt-6 max-w-xl text-base md:text-lg text-white/85 leading-relaxed">
               Premium home renovations and commercial fitouts across Brisbane,
               delivered by a team obsessed with finish, function and follow-through.
             </p>
@@ -152,21 +156,21 @@ function HomePage() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[11px] uppercase tracking-[0.22em] text-white/60 txt">Call us</div>
+                  <div className="text-[11px] uppercase tracking-[0.22em] text-white/60">Call us</div>
                   <div className="text-lg font-semibold">0450 010 250</div>
                 </div>
               </a>
             </div>
           </div>
 
-          {/* Right: portrait + floating glass lead capture card */}
-          <div className="lg:col-span-5">
-            <div className="relative max-w-md lg:max-w-none lg:ml-auto">
+          {/* Right: floating glass lead capture card */}
+          <div className="md:col-span-5 mt-10 md:mt-0">
+            <div className="relative max-w-md mx-auto md:max-w-none md:ml-auto">
               {/* Multi-layer glow */}
               <div className="absolute -inset-8 rounded-[2rem] bg-gradient-to-br from-teal/50 via-primary-glow/30 to-transparent blur-3xl opacity-80 animate-pulse [animation-duration:6s]" />
               <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-teal/30 to-transparent blur-xl" />
               {/* Glass card */}
-              <div className="relative z-30 bg-card/95 backdrop-blur-xl text-foreground p-7 md:p-9 rounded-xl shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,255,255,0.1)] ring-1 ring-white/20 border border-white/10">
+              <div className="relative z-30 bg-card/95 backdrop-blur-xl text-foreground p-6 sm:p-7 md:p-9 rounded-xl shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,255,255,0.1)] ring-1 ring-white/20 border border-white/10">
                 {/* Top sheen */}
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
                 <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal">
@@ -187,7 +191,7 @@ function HomePage() {
 
       {/* TRUST BAR */}
       <section className="bg-charcoal text-white border-t border-white/5">
-        <div className="container-prime py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="container-prime py-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
             { icon: ShieldCheck, label: "Fully Licensed & Insured" },
             { icon: CheckCircle2, label: "Fixed-Price Contracts" },
@@ -202,12 +206,12 @@ function HomePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-28">
+      <section className="py-20 md:py-28">
         <div className="container-prime">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 md:mb-16">
             <div className="max-w-2xl">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal">What we do</p>
-              <h2 className="mt-4 text-4xl md:text-5xl font-semibold text-balance">
+              <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-balance">
                 A complete renovation & construction partner.
               </h2>
             </div>
@@ -216,9 +220,9 @@ function HomePage() {
               project is delivered with the same uncompromising standard.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-md overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-md overflow-hidden">
             {services.map((s) => (
-              <div key={s.title} className="group bg-card p-8 hover:bg-charcoal hover:text-white transition-all duration-300">
+              <div key={s.title} className="group bg-card p-6 md:p-8 hover:bg-charcoal hover:text-white transition-all duration-300">
                 <s.icon className="h-8 w-8 text-teal" />
                 <h3 className="mt-6 text-xl font-semibold">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground group-hover:text-white/70">
@@ -237,12 +241,12 @@ function HomePage() {
       </section>
 
       {/* PROJECTS */}
-      <section className="py-28 bg-secondary">
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="container-prime">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 md:mb-16">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal">Recent work</p>
-              <h2 className="mt-4 text-4xl md:text-5xl font-semibold text-balance max-w-xl">
+              <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-balance max-w-xl">
                 Featured projects.
               </h2>
             </div>
@@ -265,27 +269,27 @@ function HomePage() {
               loading="lazy"
               width={1920}
               height={1080}
-              className="w-full h-[420px] md:h-[520px] object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-[280px] sm:h-[380px] md:h-[420px] lg:h-[520px] object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/40 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 text-white max-w-3xl">
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 md:p-12 text-white max-w-3xl">
               <span className="inline-flex items-center gap-2 rounded-full border border-teal/40 bg-teal/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-teal">
                 <Sparkles className="h-3 w-3" /> {featuredProject.tag}
               </span>
-              <h3 className="mt-4 text-3xl md:text-4xl font-semibold">
+              <h3 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold">
                 {featuredProject.title}
               </h3>
               <p className="mt-2 text-sm uppercase tracking-widest text-white/65">
                 {featuredProject.location}
               </p>
-              <p className="mt-4 max-w-xl text-base text-white/85 leading-relaxed">
+              <p className="mt-4 max-w-xl text-sm sm:text-base text-white/85 leading-relaxed">
                 {featuredProject.blurb}
               </p>
             </div>
           </Link>
 
           {/* Supporting grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {projects.map((p) => (
               <Link
                 to="/projects"
@@ -298,7 +302,7 @@ function HomePage() {
                   loading="lazy"
                   width={1600}
                   height={1200}
-                  className="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-[220px] sm:h-[240px] md:h-[260px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/10 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5 text-white">
@@ -312,8 +316,8 @@ function HomePage() {
       </section>
 
       {/* WHY US - split */}
-      <section className="py-28">
-        <div className="container-prime grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-20 md:py-28">
+        <div className="container-prime grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="relative">
             <img
               src={craftImg}
@@ -323,8 +327,8 @@ function HomePage() {
               height={1100}
               className="rounded-md w-full object-cover shadow-elegant"
             />
-            <div className="hidden md:block absolute -bottom-8 -right-8 bg-charcoal text-white p-8 rounded-md max-w-xs shadow-elegant">
-              <div className="text-5xl font-semibold text-teal">98%</div>
+            <div className="hidden md:block absolute -bottom-8 -right-8 bg-charcoal text-white p-6 lg:p-8 rounded-md max-w-xs shadow-elegant">
+              <div className="text-4xl lg:text-5xl font-semibold text-teal">98%</div>
               <p className="mt-2 text-sm text-white/70">
                 Of clients refer us to family and friends within 12 months.
               </p>
@@ -332,7 +336,7 @@ function HomePage() {
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal">Why Prime Finish</p>
-            <h2 className="mt-4 text-4xl md:text-5xl font-semibold text-balance">
+            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-balance">
               Premium craftsmanship, without the chaos.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -366,15 +370,15 @@ function HomePage() {
       </section>
 
       {/* PROCESS */}
-      <section className="py-28 bg-charcoal text-white">
+      <section className="py-20 md:py-28 bg-charcoal text-white">
         <div className="container-prime">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal">Our process</p>
-            <h2 className="mt-4 text-4xl md:text-5xl font-semibold text-balance">
+            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-balance">
               A clear path from concept to handover.
             </h2>
           </div>
-          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { n: "01", t: "Consult", d: "On-site consultation to understand scope, vision and budget." },
               { n: "02", t: "Design & Quote", d: "Fixed-price proposal with detailed scope, timeline and materials." },
@@ -392,17 +396,17 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-28">
+      <section className="py-20 md:py-28">
         <div className="container-prime">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal">Client stories</p>
-            <h2 className="mt-4 text-4xl md:text-5xl font-semibold text-balance">
+            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-balance">
               Built on referrals, finished to perfection.
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-card border border-border rounded-md p-8 hover:shadow-elegant transition-shadow">
+              <div key={t.name} className="bg-card border border-border rounded-md p-6 md:p-8 hover:shadow-elegant transition-shadow">
                 <Quote className="h-8 w-8 text-teal" />
                 <p className="mt-6 text-base leading-relaxed text-foreground">"{t.quote}"</p>
                 <div className="mt-6 pt-6 border-t border-border">
@@ -416,10 +420,10 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-hero text-white relative overflow-hidden">
+      <section className="py-20 md:py-24 bg-gradient-hero text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-30 [background:radial-gradient(60%_60%_at_50%_50%,oklch(0.66_0.12_210/0.5),transparent_60%)]" />
         <div className="container-prime relative text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-semibold text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-balance">
             Ready to transform your space?
           </h2>
           <p className="mt-6 text-lg text-white/80">

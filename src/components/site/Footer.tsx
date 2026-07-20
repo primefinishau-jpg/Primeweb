@@ -25,7 +25,7 @@ export function Footer() {
         aria-hidden
         viewBox="0 0 1600 240"
         preserveAspectRatio="xMidYEnd slice"
-        className="pointer-events-none absolute inset-x-0 bottom-0 w-full h-44 md:h-60 text-teal/25"
+        className="pointer-events-none absolute inset-x-0 bottom-0 w-full h-32 sm:h-44 md:h-52 lg:h-60 text-teal/25"
       >
         <defs>
           <linearGradient id="bneFade" x1="0" y1="0" x2="0" y2="1">
@@ -61,9 +61,9 @@ export function Footer() {
         </g>
       </svg>
 
-      <div className="container-prime relative py-20 grid gap-12 lg:grid-cols-4">
-        <div className="lg:col-span-2 max-w-md">
-          <Logo className="h-28 md:h-32 w-auto -ml-2 mix-blend-lighten drop-shadow-[0_8px_30px_rgba(0,0,0,0.4)]" />
+      <div className="container-prime relative py-16 md:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-2 max-w-md">
+          <Logo className="h-24 sm:h-28 md:h-32 w-auto -ml-2 mix-blend-lighten drop-shadow-[0_8px_30px_rgba(0,0,0,0.4)]" />
           <p className="mt-6 text-sm leading-relaxed text-white/65">
             Prime Finish Renovations delivers premium residential and commercial
             renovations across Brisbane. Licensed, insured, and obsessed with
@@ -96,24 +96,24 @@ export function Footer() {
           <h4 className="text-sm font-semibold text-white uppercase tracking-widest">Contact</h4>
           <ul className="mt-5 space-y-4 text-sm">
             <li className="flex items-start gap-3">
-              <Phone className="h-4 w-4 mt-0.5 text-teal" />
+              <Phone className="h-4 w-4 mt-0.5 text-teal shrink-0" />
               <a href="tel:+61450010250" className="hover:text-teal">0450 010 250</a>
             </li>
             <li className="flex items-start gap-3">
-              <Mail className="h-4 w-4 mt-0.5 text-teal" />
+              <Mail className="h-4 w-4 mt-0.5 text-teal shrink-0" />
               <a href="mailto:info@primefinishrenovations.com" className="hover:text-teal break-all">
                 info@primefinishrenovations.com
               </a>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin className="h-4 w-4 mt-0.5 text-teal" />
+              <MapPin className="h-4 w-4 mt-0.5 text-teal shrink-0" />
               <span>Servicing Brisbane & surrounding suburbs</span>
             </li>
           </ul>
         </div>
       </div>
       <div className="relative border-t border-white/5 bg-charcoal/80 backdrop-blur-sm">
-        <div className="container-prime py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        <div className="container-prime py-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-white/50 text-center sm:text-left">
           <p>© {new Date().getFullYear()} Prime Finish Renovations. All rights reserved.</p>
           <p>Transforming Spaces. Elevating Lives.</p>
         </div>
