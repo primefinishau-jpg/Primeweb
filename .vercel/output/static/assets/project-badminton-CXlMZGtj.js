@@ -1,1 +1,0 @@
-var e=`/assets/project-kitchen-7-yV7Shh.jpg`,t=`/assets/project-bathroom-BlnHY4-S.jpg`,n=`/assets/project-extension-BLgW4gqo.jpg`,r=`/assets/project-commercial-DauoceRV.jpg`,i=`/assets/project-badminton-BvWtXJa7.jpg`;export{e as a,t as i,r as n,n as r,i as t};
