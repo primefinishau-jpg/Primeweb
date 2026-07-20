@@ -84,6 +84,8 @@ const testimonials = [
   },
 ];
 
+
+
 function HomePage() {
   return (
     <>
@@ -117,7 +119,7 @@ function HomePage() {
           />
         </div>
 
-        <div className="container-prime relative pt-20 md:pt-24 lg:pt-28 xl:pt-36 pb-16 md:pb-20 gw-full grid grid-cols-1 lg:grid-cols-7 gap-5 items-center">
+        <div className="container-prime relative pt-20 md:pt-24 lg:pt-28 xl:pt-36 pb-16 md:pb-20 gw-full grid grid-cols-1 xl:grid-cols-7 gap-5 items-center">
           {/* Left: copy */}
           <div className="relative z-20 lg:col-span-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-teal/40 bg-teal/10 backdrop-blur px-4 py-1.5 text-[11px] font-semibold text-teal uppercase tracking-[0.22em]">
