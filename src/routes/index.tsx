@@ -87,7 +87,7 @@ const testimonials = [
 function HomePage() {
   return (
     <>
-      {/* HERO */}      <section className="relative min-h-[760px] lg:min-h-[820px] xl:min-h-screen flex items-center text-white overflow-hidden bg-charcoal">
+      {/* HERO */}      <section className="relative min-h-screen flex items-center text-white overflow-hidden bg-charcoal">
         {/* Atmospheric backdrop */}
         <div className="absolute inset-0 bg-linear-to-br from-charcoal via-charcoal to-[oklch(0.1_0.02_230)]" />
         {/* Teal ambient glows */}
@@ -117,9 +117,9 @@ function HomePage() {
           />
         </div>
 
-        <div className="container-prime relative pt-20 md:pt-24 lg:pt-28 xl:pt-36 pb-16 md:pb-20 grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="container-prime relative pt-20 md:pt-24 lg:pt-28 xl:pt-36 pb-16 md:pb-20 gw-full grid grid-cols-1 lg:grid-cols-7 gap-5 items-center">
           {/* Left: copy */}
-          <div className="relative z-20 md:col-span-12 lg:col-span-6 xl:col-span-7 max-w-2xl">
+          <div className="relative z-20 lg:col-span-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-teal/40 bg-teal/10 backdrop-blur px-4 py-1.5 text-[11px] font-semibold text-teal uppercase tracking-[0.22em]">
               <MapPin className="h-3.5 w-3.5" /> Brisbane Renovation Experts
             </div>
@@ -163,7 +163,7 @@ function HomePage() {
           </div>
 
           {/* Right: floating glass lead capture card */}
-          <div className="md:col-span-5 mt-10 md:mt-0">
+          <div className="lg:col-span-3 mt-10 md:mt-0">
             <div className="relative max-w-md mx-auto md:max-w-none md:ml-auto">
               {/* Multi-layer glow */}
               <div className="absolute -inset-8 rounded-[2rem] bg-gradient-to-br from-teal/50 via-primary-glow/30 to-transparent blur-3xl opacity-80 animate-pulse [animation-duration:6s]" />
